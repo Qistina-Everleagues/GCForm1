@@ -1,0 +1,48 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active {
+    color: lightgray;
+}
+
+.navigation-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+mat-toolbar {
+    border-radius: 0px;
+}
+
+@media(max-width: 959px) {
+    mat-toolbar {
+        border-radius: 0px;
+    }
+}
+
+.vl {
+    border-left: 1px solid white;
+    height: 35px;
+  }
+
+.vl-spacer {
+    flex: 0.01 0.01 auto;
+}
+
+.v2-spacer {
+    flex: 0.02 0.02 auto;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}

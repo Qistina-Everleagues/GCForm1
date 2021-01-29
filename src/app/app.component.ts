@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  opened = false;
+
   title = 'GCForm1';
+
+  toggleSidebar() {
+    this.opened = !this.opened;
+  }
 }
