@@ -241,7 +241,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Are you currently in a relationship?</mat-label>
           <input matInput formControlName="relationship" required>
-          <mat-error *ngIf="gcform2.controls['relationship'].errors?.required">This field is required.</mat-error>
+          <mat-error *ngIf="gcform.controls['relationship'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
