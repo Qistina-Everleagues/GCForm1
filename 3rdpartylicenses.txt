@@ -295,6 +295,8 @@ MIT
 
 @angular/material/core
 
+@angular/material/checkbox
+
 @angular/material/radio
 
 @angular/material/dialog
