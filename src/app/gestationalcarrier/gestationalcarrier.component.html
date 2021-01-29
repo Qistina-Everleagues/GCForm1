@@ -205,16 +205,15 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Due to tribal laws (we're required to ask), are you or an immediate family member a member of a Native American or Alaskan Indian tribe?</mat-label>
-          <mat-select formControlName="tribal_laws" required>
-            <mat-option value="Yes">Yes</mat-option>
-            <mat-option value="No">No</mat-option>
-            <mat-option value="N/A">N/A</mat-option>
-          </mat-select>
-          <mat-error *ngIf="gcform.controls['tribal_laws'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
+        <div class="add-bottom-padding">
+          <label>Due to tribal laws (we're required to ask), are you or an immediate family member a member of a Native American or Alaskan Indian tribe?</label><br><br>
+          <mat-radio-group formControlName="tribal_laws" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
       </tr>
+      <br>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Do you have a valid drivers license?</mat-label>
@@ -355,7 +354,7 @@
           <mat-select formControlName="pregnancies" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="I delivered one or more times at 34 weeks or less">I delivered one or more times at 34 weeks or less</mat-option>
-            <mat-option value="I delivered one or more times between 35-37 weeks">I delivered one or more times between 35-37 weeks.</mat-option>
+            <mat-option value="No, all of my deliveries were between 37-40 weeks">No, all of my deliveries were between 37-40 weeks</mat-option>
           </mat-select>
           <mat-error *ngIf="gcform.controls['pregnancies'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
@@ -372,7 +371,7 @@
           <mat-select formControlName="complications" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="Yes">Yes</mat-option>
-            <mat-option value="No">No</mat-option>
+            <mat-option value="No, to my knowledge I have not had any major complications during pregnancy">No, to my knowledge I have not had any major complications during pregnancy</mat-option>
           </mat-select>
           <mat-error *ngIf="gcform.controls['complications'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
@@ -422,7 +421,7 @@
           <mat-select formControlName="breastfeeding" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="Yes">Yes</mat-option>
-            <mat-option value="No,  I am not currently breastfeeding.">No,  I am not currently breastfeeding.</mat-option>
+            <mat-option value="No, I am not currently breastfeeding.">No, I am not currently breastfeeding.</mat-option>
           </mat-select>
           <mat-error *ngIf="gcform.controls['breastfeeding'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
@@ -555,16 +554,41 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>Any major GYN surgeries involving reproductive organs?</mat-label>
-          <mat-select formControlName="organs" required>
-            <mat-option value="N/A">N/A</mat-option>
-            <mat-option value="Yes">Yes</mat-option>
-            <mat-option value="No">No</mat-option>
-          </mat-select>
-          <mat-error *ngIf="gcform.controls['organs'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
+        <mat-label><b>Any major GYN surgeries involving reproductive organs?</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Yes</th>
+            <th>No</th>
+          </tr>
+          <tr>
+            <th>Ovarian Cystectomy</th>
+            <td><mat-checkbox formControlName="Ovarian_Cystectomy_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Ovarian_Cystectomy_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Fibroid Removal</th>
+            <td><mat-checkbox formControlName="Fibroid_Removal_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Fibroid_Removal_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Salpingectomy</th>
+            <td><mat-checkbox formControlName="Salpingectomy_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Salpingectomy_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Oophorectomy</th>
+            <td><mat-checkbox formControlName="Oophorectomy_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Oophorectomy_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Other (please specify)</th>
+            <td><mat-checkbox formControlName="Other_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Other_no"></mat-checkbox></td>
+          </tr>
+        </table>
       </tr>
+      <br>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>If yes, please provide dates.</mat-label>
@@ -620,7 +644,7 @@
       </tr>
       <tr>
         <mat-form-field appearance="outline">
-          <mat-label>Are you or your partner / spouse currently diagnosed with:</mat-label>
+          <mat-label>Are you or your partner/spouse currently diagnosed with:</mat-label>
           <mat-select formControlName="diagnosed" required>
             <mat-option value="AIDS">AIDS</mat-option>
             <mat-option value="Genital Herpes">Genital Herpes</mat-option>
