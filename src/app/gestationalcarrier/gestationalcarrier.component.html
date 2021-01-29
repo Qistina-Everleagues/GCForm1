@@ -128,12 +128,76 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
-          <mat-label>What is your ethnic heritage? (Check all that apply)</mat-label>
-          <input matInput formControlName="ethnic" required>
-          <mat-error *ngIf="gcform.controls['ethnic'].errors?.required">This field is required.</mat-error>
-        </mat-form-field>
+        <mat-label><b>What is your ethnic heritage? (Check all that apply)</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Mother's Side</th>
+            <th>Father's Side</th>
+          </tr>
+          <tr>
+            <th>Asian</th>
+            <td><mat-checkbox formControlName="Asian_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Asian_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Black or African American</th>
+            <td><mat-checkbox formControlName="Black_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Black_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hispanic or Latino</th>
+            <td><mat-checkbox formControlName="Latino_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Latino_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Native American</th>
+            <td><mat-checkbox formControlName="Native_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Native_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>German</th>
+            <td><mat-checkbox formControlName="German_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="German_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>French</th>
+            <td><mat-checkbox formControlName="French_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="French_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Irish</th>
+            <td><mat-checkbox formControlName="Irish_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Irish_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Italian</th>
+            <td><mat-checkbox formControlName="Italian_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Italian_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Pacific Islander</th>
+            <td><mat-checkbox formControlName="Pacific_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Pacific_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Cherokee</th>
+            <td><mat-checkbox formControlName="Cherokee_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Cherokee_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Caucasian</th>
+            <td><mat-checkbox formControlName="Caucasian_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Caucasian_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Other</th>
+            <td><mat-checkbox formControlName="Other_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Other_father"></mat-checkbox></td>
+          </tr>
+        </table>
       </tr>
+      <br>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Other:</mat-label>
@@ -176,12 +240,8 @@
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Are you currently in a relationship?</mat-label>
-          <mat-select formControlName="relationship" required>
-            <mat-option value="Yes">Yes</mat-option>
-            <mat-option value="No">No</mat-option>
-            <mat-option value="N/A">N/A</mat-option>
-          </mat-select>
-          <mat-error *ngIf="gcform.controls['relationship'].errors?.required">This field is required.</mat-error>
+          <input matInput formControlName="relationship" required>
+          <mat-error *ngIf="gcform2.controls['relationship'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
@@ -295,7 +355,7 @@
           <mat-select formControlName="pregnancies" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="I delivered one or more times at 34 weeks or less">I delivered one or more times at 34 weeks or less</mat-option>
-            <mat-option value="I delivered one or more times between 35-37 weeks.">I delivered one or more times between 35-37 weeks.</mat-option>
+            <mat-option value="I delivered one or more times between 35-37 weeks">I delivered one or more times between 35-37 weeks.</mat-option>
           </mat-select>
           <mat-error *ngIf="gcform.controls['pregnancies'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
@@ -342,12 +402,12 @@
           <ng-container *ngIf="Form.controls.delivery_historys!=null">
             <div *ngFor="let delivery_history of Form.controls.delivery_historys.controls; let i=index" [formGroupName]="i">
               <tr>
-                <td><input matInput formControlName="surrogacy" placeholder="OWN OR SURROGACY"></td>
-                <td><input matInput formControlName="birthDate" placeholder="DATE OF BIRTH"></td>
-                <td><input matInput formControlName="vaginal" placeholder="VAGINAL OR C-SECTION"></td>
-                <td><input matInput formControlName="birthWeight" placeholder="BIRTH WEIGHT"></td>
-                <td><input matInput formControlName="number" placeholder="NUMBER O"></td>
-                <td><button mat-raised-button color="warn" (click)="deleteRow(i)">X</button></td>
+                <td><input matInput formControlName="surrogacy" placeholder="Own or Surrogacy"></td>
+                <td><input matInput formControlName="birthDate" placeholder="Date Of Birth"></td>
+                <td><input matInput formControlName="vaginal" placeholder="Vaginal or C-Section"></td>
+                <td><input matInput formControlName="birthWeight" placeholder="Birth Weight"></td>
+                <td><input matInput formControlName="number" placeholder="Number of Weeks Carried"></td>
+                <td><button mat-raised-button color="warn" (click)="deleteRow1(i)">X</button></td>
               </tr>
             </div>
           </ng-container>
@@ -362,7 +422,7 @@
           <mat-select formControlName="breastfeeding" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="Yes">Yes</mat-option>
-            <mat-option value="No">No</mat-option>
+            <mat-option value="No,  I am not currently breastfeeding.">No,  I am not currently breastfeeding.</mat-option>
           </mat-select>
           <mat-error *ngIf="gcform.controls['breastfeeding'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
@@ -377,7 +437,7 @@
         <mat-form-field appearance="outline">
           <mat-label>What is your current form of birth control?</mat-label>
           <mat-select formControlName="birth_control" required>
-            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="Birth control pills">Birth control pills</mat-option>
             <mat-option value="Depo Shot">Depo Shot</mat-option>
             <mat-option value="Other (Please Specify)">Other (Please Specify)</mat-option>
           </mat-select>
@@ -438,7 +498,7 @@
           <mat-select formControlName="anti_depression" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="Yes">Yes</mat-option>
-            <mat-option value="No">No</mat-option>
+            <mat-option value="No, I have not taken any anti anxiety or anti depression medication in the last year.">No, I have not taken any anti anxiety or anti depression medication in the last year.</mat-option>
           </mat-select>
           <mat-error *ngIf="gcform.controls['anti_depression'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
