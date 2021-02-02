@@ -291,6 +291,10 @@ MIT
 
 @angular/material/form-field
 
+@angular/material/dialog
+
+@angular/material/datepicker
+
 @angular/material/select
 
 @angular/material/core
@@ -298,10 +302,6 @@ MIT
 @angular/material/checkbox
 
 @angular/material/radio
-
-@angular/material/dialog
-
-@angular/material/datepicker
 
 @angular/material/icon
 
