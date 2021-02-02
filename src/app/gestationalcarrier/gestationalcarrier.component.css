@@ -9,7 +9,13 @@ h1 {
 
 .my-class{
     font-size: 18px;
-    width: 500px!important;
+    width: 450px!important;
+    min-width: unset!important;
+}
+
+.bmi{
+    font-size: 14px;
+    width: 150px!important;
     min-width: unset!important;
 }
 
