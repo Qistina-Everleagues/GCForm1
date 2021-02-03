@@ -33,7 +33,8 @@ width: 100%;
     margin: 5px;
 }
 mat-radio-group mat-radio-button{
-    margin-left: 5px;
+    margin-left: 10px;
+    margin: 0 20px 0 20px;
 }
 
 .fill-remaining-space {
