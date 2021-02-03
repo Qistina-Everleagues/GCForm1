@@ -58,7 +58,7 @@ export class GestationalcarrierComponent implements OnInit {
     lastName: new FormControl('', Validators.required),
     address: new FormControl(''),
     city: new FormControl(''),
-    state_fill: new FormControl('', [Validators.required]),
+    foreign: new FormControl('', [Validators.required]),
     outside_USA: new FormControl(''),
     zip_code: new FormControl('', Validators.required),
     telephone_number: new FormControl('', Validators.required),

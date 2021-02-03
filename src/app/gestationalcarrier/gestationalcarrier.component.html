@@ -71,9 +71,9 @@
         <table>
           <td>
             <tr>
-              <mat-label><b>8. State</b></mat-label><br>
+              <mat-label><b>8. U.S. State</b></mat-label><br>
               <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
-                <mat-label>State</mat-label>
+                <mat-label>U.S. State</mat-label>
                 <mat-select [formControl]="state" required>
                   <mat-option value="Alabama">AL</mat-option>
                   <mat-option value="Alaska">AK</mat-option>
@@ -132,11 +132,11 @@
           </td>
           <td>
             <tr>
-              <mat-label><b>9. State</b></mat-label><br>
+              <mat-label><b>9. Foreign Province</b></mat-label><br>
               <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
-                <mat-label>State</mat-label>
-                <input matInput formControlName="state_fill" required>
-                <mat-error *ngIf="gcform.controls['state_fill'].errors?.required">This field is required.</mat-error>
+                <mat-label>Foreign Province</mat-label>
+                <input matInput formControlName="foreign" required>
+                <mat-error *ngIf="gcform.controls['foreign'].errors?.required">This field is required.</mat-error>
               </mat-form-field>
             </tr>
           </td>
