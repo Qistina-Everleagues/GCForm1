@@ -48,17 +48,17 @@ export class GestationalcarrierComponent implements OnInit {
     }
   }
 
-  citizenship_status = new FormControl(0, [Validators.required]);
-  state = new FormControl(0, [Validators.required]);
-  bioChildren = new FormControl(0, [Validators.required]);
-  birth_control = new FormControl(0, [Validators.required]);
+  citizenship_status = new FormControl('', [Validators.required]);
+  state = new FormControl('', [Validators.required]);
+  bioChildren = new FormControl('', [Validators.required]);
+  birth_control = new FormControl('', [Validators.required]);
 
   gcform: FormGroup = new FormGroup ({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     address: new FormControl(''),
     city: new FormControl(''),
-    state_fill: new FormControl(''),
+    state_fill: new FormControl('', [Validators.required]),
     outside_USA: new FormControl(''),
     zip_code: new FormControl('', Validators.required),
     telephone_number: new FormControl('', Validators.required),

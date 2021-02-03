@@ -66,7 +66,7 @@
             <tr>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label>State</mat-label>
-                <mat-select [formControl]="state">
+                <mat-select [formControl]="state" required>
                   <mat-option value="Alabama">AL</mat-option>
                   <mat-option value="Alaska">AK</mat-option>
                   <mat-option value="Arizona">AZ</mat-option>
@@ -126,7 +126,8 @@
             <tr>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label>State</mat-label>
-                <input matInput formControlName="state_fill">
+                <input matInput formControlName="state_fill" required>
+                <mat-error *ngIf="gcform.controls['state_fill'].errors?.required">This field is required.</mat-error>
               </mat-form-field>
             </tr>
           </td>
