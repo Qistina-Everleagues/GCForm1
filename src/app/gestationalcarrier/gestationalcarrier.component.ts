@@ -60,7 +60,7 @@ export class GestationalcarrierComponent implements OnInit {
     city: new FormControl(''),
     outside_USA: new FormControl(''),
     zip_code: new FormControl('', Validators.required),
-    telephone_number: new FormControl('', Validators.required),
+    telephone_number: new FormControl(''),
     height_in: new FormControl('', Validators.required),
     height_feet: new FormControl('', Validators.required),
     weight: new FormControl('', Validators.required),

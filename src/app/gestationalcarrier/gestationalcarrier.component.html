@@ -151,11 +151,10 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>11. What is your primary phone number?</b></mat-label><br>
+        <mat-label><b>11. Your cell phone number so we can send you notifications and reminders via text</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>What is your primary phone number?</mat-label>
-          <input matInput formControlName="telephone_number" maxlength="50" required>
-          <mat-error *ngIf="gcform.controls['telephone_number'].errors?.required">This field is required.</mat-error>
+          <mat-label>Your cell phone number so we can send you notifications and reminders via text</mat-label>
+          <input matInput formControlName="telephone_number" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
